@@ -6,19 +6,25 @@ var yourNumber;
 var newGame = true;
 var minTotal = 19;
 var maxTotal = 120;
+const min = 19;
+const max = 120;
 
 
 
 //This is going to be picking my total number at random
-var randomNumberTotal = randomNumberFromRange(minTotal, maxTotal);
-function randomNumberFromRange(min , max) {
+var randomNumberTotal = randomNumberTotal(minTotal , maxTotal);
+function randomNumberTotal() {
 
 
-    return Math.Floor(Math.random() * (max-min+1)+min);
+    return Math.floor(Math.random() * 101) + 19;  
 
 }
 console.log(randomNumberTotal);
 
+var blueGem;
+var greenGem;
+var redGem;
+var yellowGem;
 //four buttons that will have images of gemstones
 
 
