@@ -72,8 +72,14 @@ function randomYellowGem() {
 
 console.log(yellowGem);
 
+$(document).ready(function() {
+    $("blue-gem").on("click", function() {
 
-//need a random number generator for the crystal and starting values
+        $(blueGem).click();
+    });
+
+});
+ 
 
 
 //when the player clicks on a crystal, it will give them a certian amount of points
