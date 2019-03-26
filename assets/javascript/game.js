@@ -74,13 +74,41 @@ console.log(yellowGem);
 
 $(document).ready(function() {
     $("blue-gem").on("click", function() {
-
-        $(blueGem).click();
+       
+        yourNumber += blueGem;
+    
+        
     });
 
 });
- 
 
+$(document).ready(function() {
+    $("green-gem").on("click", function() {
+
+        yourNumber += greenGem;
+    });
+});
+
+$(document).ready(function() {
+    $("red-gem").on("click", function() {
+
+        yourNumber += redGem;
+
+
+    });
+ 
+});
+
+$(document).ready(function() {
+    $("yellow-gem").on("click", function() {
+
+        yourNumber += yellowGem;
+
+
+    });
+
+
+});
 
 //when the player clicks on a crystal, it will give them a certian amount of points
 //The game will hide the value of the crystal at all times
