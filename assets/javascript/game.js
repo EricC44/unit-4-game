@@ -1,13 +1,23 @@
 //global variables
+var wins = 0;
+var loses = 0;
+var totalNumber;
+var yourNumber;
+var newGame = true;
+var minTotal = 19;
+var maxTotal = 120;
 
 
 
+//This is going to be picking my total number at random
+var randomNumberTotal = randomNumberFromRange(minTotal, maxTotal);
+function randomNumberFromRange(min , max) {
 
 
+    return Math.Floor(Math.random() * (max-min+1)+min);
 
-
-
-
+}
+console.log(randomNumberTotal);
 
 //four buttons that will have images of gemstones
 
@@ -32,4 +42,4 @@
 
 
 
-//game restarts 
+
