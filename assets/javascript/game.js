@@ -1,13 +1,14 @@
+$(document).ready(function() { ;
+
+
+
+
+
 //global variables
 var wins = 0;
 var loses = 0;
-var totalNumber;
+var totalNumber
 var yourNumber;
-var newGame = true;
-var minTotal = 19;
-var maxTotal = 120;
-const min = 19;
-const max = 120;
 var blueGem;
 var greenGem;
 var redGem;
@@ -15,17 +16,17 @@ var yellowGem;
 
 
 
+
+
 //This is going to be picking my total number at random
-var randomNumberTotal = randomNumberTotal(minTotal , maxTotal);
-function randomNumberTotal() {
 
-    
-    
-    return Math.floor(Math.random() * 101) + 19; 
-     
+var totalNumber = Math.floor(Math.random() * 101 + 19)
 
-}
-console.log(randomNumberTotal);
+console.log(totalNumber);
+//This should append our value to the totalNumber div
+$("#totalNumber").text(totalNumber);
+
+
 
 
 
@@ -134,5 +135,5 @@ function gameOver() {
 
 
 
-
+});
 
