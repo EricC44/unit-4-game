@@ -73,7 +73,7 @@ function randomYellowGem() {
 console.log(yellowGem);
 
 $(document).ready(function() {
-    $("blue-gem").on("click", function() {
+    $("#blue-gemstone").on("click", function() {
        
         yourNumber += blueGem;
     
@@ -83,14 +83,14 @@ $(document).ready(function() {
 });
 
 $(document).ready(function() {
-    $("green-gem").on("click", function() {
+    $("#green-gemstone").on("click", "#green-gemstone.jpg", function() {
 
         yourNumber += greenGem;
     });
 });
 
 $(document).ready(function() {
-    $("red-gem").on("click", function() {
+    $("#red-gemstone").on("click", function() {
 
         yourNumber += redGem;
 
@@ -100,7 +100,7 @@ $(document).ready(function() {
 });
 
 $(document).ready(function() {
-    $("yellow-gem").on("click", function() {
+    $("#yellow-gemstone").on("click", function() {
 
         yourNumber += yellowGem;
 
@@ -110,10 +110,23 @@ $(document).ready(function() {
 
 });
 
-//when the player clicks on a crystal, it will give them a certian amount of points
-//The game will hide the value of the crystal at all times
+function gameOver() {
 
-//player wins when number matches target, player loses when they go over
+    if(yourNumber > totalNumber) {
+        alert("You Lose")
+        newGame = true;
+    }
+
+    if(yourNumber === totalNumber) {
+        alert("You Win")
+        newGame = true;
+    }
+
+    if(yourNumber < totalNumber) {
+        newGame = false;
+    }
+}
+
 
 
 
