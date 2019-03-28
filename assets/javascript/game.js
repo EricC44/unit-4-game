@@ -15,7 +15,8 @@ var redGem;
 var yellowGem;
 
 
-
+$("#wins").text(wins);
+$("#wins").text(loses);
 
 
 //This is going to be picking my total number at random
@@ -32,46 +33,10 @@ $("#totalNumber").text(totalNumber);
 
 
 //This is for picking random values for each gemstone
-
-//For the blue gem
-var blueGem = randomBlueGem();
-
-function randomBlueGem() {
-
-    return Math.floor(Math.random() * 12) + 1;
-}
-
-console.log(blueGem);
-
-//For the green gem
-var greenGem = randomGreenGem();
-
-function randomGreenGem() {
-
-    return Math.floor(Math.random() * 12) + 1;
-}
-
-console.log(greenGem)
-
-//For the red gem
-var redGem = randomRedGem();
-
-function randomRedGem() {
-
-    return Math.floor(Math.random() * 12) + 1;
-}
-
-console.log(redGem);
-
-//For the yellow gem
-var yellowGem = randomYellowGem();
-
-function randomYellowGem() {
-
-    return Math.floor(Math.random() * 12) + 1;
-}
-
-console.log(yellowGem);
+var blueGem = Math.floor(Math.random() * 12) + 1;
+var greenGem = Math.floor(Math.random() * 12) + 1;
+var redGem = Math.floor(Math.random() * 12) + 1;
+var yellowGem = Math.floor(Math.random() * 12) + 1;
 
 $(document).ready(function() {
     $("#blue-gemstone").on("click", function() {
