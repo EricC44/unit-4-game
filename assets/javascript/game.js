@@ -10,7 +10,7 @@ $(document).ready(function() { ;
     var wins = 0;
     var loses = 0;
     var totalNumber
-    var yourNumber;
+    var yourNumber = 0;
     var blueGem;
     var greenGem;
     var redGem;
@@ -41,13 +41,54 @@ $(document).ready(function() { ;
     var yellowGem = Math.floor(Math.random() * 12) + 1;
     console.log(blueGem , greenGem , redGem , yellowGem);
     
-    $("#blue-gem").on("click", function() {
+    $("#blue-gemstone").on("click", function() {
         yourNumber = yourNumber + blueGem;
 
-        console.log("New yourNumber= " + yourNumber);
+        console.log(yourNumber);
+
+        $("#your-total").text(yourNumber);
+            if(yourNumber === totalNumber){
+                winner();
+            }
+            else if(yourNumber > totalNumber){
+                loser();
+            }
+        
     });
-
-
+    $("#green-gemstone").on("click", function() { 
+        yourNumber = yourNumber + greenGem;
+        console.log(yourNumber);
+    
+        $("#your-total").text(yourNumber);
+            if(yourNumber === totalNumber) {
+            winner();
+            }
+            else if(yourNumber > totalNumber){
+            loser();
+            }
+    });
+    $("#red-gemstone").on("click", function() {
+        yourNumber = yourNumber + redGem;
+        console.log(yourNumber);
+        $("#your-total").text(yourNumber);
+            if(yourNumber === totalNumber) {
+                winner();
+            }
+            else if(yourNumber > totalNumber) {
+                loser();
+            }
+    });
+    $("#yellow-gemstone").on("click", function() {
+        yourNumber = yourNumber + yellowGem;
+        console.log(yourNumber);
+        $("#your-total").text(yourNumber);
+            if(yourNumber === totalNumber) {
+                winner();
+            }
+            else if(yourNumber > totalNumber) {
+                loser();
+            }
+        });        
 
 
 
