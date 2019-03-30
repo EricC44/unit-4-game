@@ -16,7 +16,7 @@ $(document).ready(function() { ;
     var redGem;
     var yellowGem;
 
-
+    //append the wins and loses to the HTML
     $("#wins").text(wins);
     $("#loses").text(loses);
 
@@ -40,7 +40,7 @@ $(document).ready(function() { ;
     var redGem = Math.floor(Math.random() * 12) + 1;
     var yellowGem = Math.floor(Math.random() * 12) + 1;
     console.log(blueGem , greenGem , redGem , yellowGem);
-    
+    //buttons that add the gemstone values
     $("#blue-gemstone").on("click", function() {
         yourNumber = yourNumber + blueGem;
 
