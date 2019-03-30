@@ -88,7 +88,35 @@ $(document).ready(function() { ;
             else if(yourNumber > totalNumber) {
                 loser();
             }
-        });        
+        });
+        
+        
+    function winner() {
+    alert ("Winner!");
+    wins++;
+    $("#wins").text(wins);
+    reset();
+    }
+
+    function loser() {
+    alert ("Loser!");
+    loses++;
+    $("#loses").text(loses);
+    reset();
+    }
+
+
+    function reset() {
+    totalNumber = Math.floor(Math.random() * 101 + 19);
+    $("#totalNumber").text(totalNumber);
+    blueGem = Math.floor(Math.random() * 12 + 1);
+    greenGem = Math.floor(Math.random() * 12 + 1);
+    redGem = Math.floor(Math.random() * 12 + 1);
+    yellowGem = Math.floor(Math.random() * 12 + 1);
+    yourNumber = 0;
+    $("#your-total").text(yourNumber);
+    console.log(totalNumber , blueGem , greenGem , redGem , yellowGem)
+    }
 
 
 
